@@ -11,6 +11,8 @@
 |
 */
 
+Route::auth();
+
 Route::get('/', function () {
     return view('index.index');
 });

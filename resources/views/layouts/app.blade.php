@@ -65,8 +65,7 @@
 
 
 <div class="main-container" id="page">
-
-
+    <input type="hidden" id="_token" name="_token" value="{{csrf_token()}}">
     <header id="nav5-1">
 
         <!-- Top Bar -->

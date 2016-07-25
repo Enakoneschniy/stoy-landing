@@ -1,6 +1,6 @@
 <?php
 return [
-    'title' => 'News',
+    'title' => "Новости",
     'single' => 'news',
     'model' => 'App\Models\Post',
     'form_width' => 600,

@@ -143,6 +143,6 @@ return array(
      *
      * @type array
      */
-    'locales' => array('ru', 'en'),
+    'locales' => array('ru'),
 
 );

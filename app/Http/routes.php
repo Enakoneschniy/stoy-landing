@@ -12,5 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index.index');
+});
+
+Route::get('/news', function () {
+    return view('news.list');
+});
+
+Route::get('/news/{id}', function () {
+
+    return view('news.detail');
+});
+
+Route::get('/portfolio', function () {
+    return view('portfolio.list');
 });

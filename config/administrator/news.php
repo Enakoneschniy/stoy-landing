@@ -1,7 +1,7 @@
 <?php
 return [
-    'title' => "Новости",
-    'single' => 'news',
+    'title' => 'Новости',
+    'single' => 'новость',
     'model' => 'App\Models\Post',
     'form_width' => 600,
 
@@ -9,23 +9,30 @@ return [
         'id' => [
             'type' => 'number'
         ],
-        'preview_image' => array(
-            'title' => 'Image',
-            'output' => '<img src="/uploads/posts/resize/(:value)" height="100" />',
+        'image' => array(
+            'title' => 'Картинка',
+            'output' => '<img src="/uploads/posts/resize/admin/(:value)" width="85" />',
         ),
         'title' => [
             'type' => 'text',
-            'title' => 'Title'
+            'title' => 'Заголовок'
         ],
         'preview_text' => [
             'type' => 'text',
-            'title' => 'Preview text'
+            'title' => 'Краткое описание'
+        ],
+        'created_at' => [
+            'type' => 'datetime',
+            'title' => 'Дата добавления',
+            'date_format' => 'dd.mm.yy', //optional, will default to this value
+            'time_format' => 'HH:mm',    //optional, will default to this value
         ],
         'active' => [
             'type' => 'bool',
-            'title' => 'Active',
+            'title' => 'Активность',
             'editable' => true,
         ],
+
     ],
     'edit_fields' => [
         'active' => [
@@ -36,15 +43,6 @@ return [
             'title' => 'Заголовок',
             'type' => 'text'
         ],
-        'type' => [
-            'type' => 'enum',
-            'title' => 'Тип',
-            'options' => [
-                'Галерея',
-                'Фото',
-                'Видео'
-            ],
-        ],
         'preview_text' => [
             'type' => 'wysiwyg',
             'title' => 'Краткое описание'
@@ -53,23 +51,32 @@ return [
             'type' => 'wysiwyg',
             'title' => 'Полное описание'
         ],
-        'preview_img' => [
-            'title' => 'Маленькая картинка',
+        'image' => [
+            'title' => 'Превью картинка',
             'type' => 'image',
             'naming' => 'random',
             'location' => public_path().'/uploads/posts/origin/',
             'sizes' => [
-                [150, 150, 'crop', public_path().'/uploads/posts/resize/', 100],
-            ],
-        ],
-        'preview_img' => [
-            'title' => 'Большая картинка',
-            'type' => 'image',
-            'naming' => 'random',
-            'location' => public_path().'/uploads/posts/origin/',
-            'sizes' => [
-                [150, 150, 'crop', public_path().'/uploads/posts/resize/', 100],
+                [85, 60, 'crop', public_path().'/uploads/posts/resize/detail/admin', 100],
+                [750, 500, 'crop', public_path().'/uploads/posts/resize/public', 100],
+                [75, 50, 'crop', public_path().'/uploads/posts/resize/preview/public', 100],
             ],
         ]
+    ],
+    'filters' => [
+        'active' => [
+            'title' => 'Активность',
+            'type' => 'bool',
+        ],
+        'title' => [
+            'type' => 'text',
+            'title' => 'Заголовок',
+        ],
+        'created_at' => [
+            'type' => 'datetime',
+            'title' => 'Дата добавления',
+            'date_format' => 'dd.mm.yy', //optional, will default to this value
+            'time_format' => 'HH:mm',    //optional, will default to this value
+        ],
     ]
 ];

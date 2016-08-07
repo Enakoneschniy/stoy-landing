@@ -66,7 +66,11 @@ return array(
      *	)
      */
     'menu' => array(
-        'news'
+        'news',
+        'Settings' => [
+            'settings.contact',
+            'settings.images'
+        ]
     ),
 
     /**

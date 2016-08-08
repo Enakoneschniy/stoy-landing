@@ -4597,3 +4597,13 @@ input.toggle-round-flat:checked + label:after {
     margin-right: 2px;
 }
 
+.bot-bar {
+    padding: 20px 0 55px;
+    border-bottom: 0px;
+    color: #eff1f4;
+    opacity: 1;
+}
+.top-bar.bot-bar .contact-info .email a {
+    color: #eff1f4;
+}
+

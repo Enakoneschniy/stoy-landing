@@ -165,6 +165,19 @@
         ============================== -->
     <footer id="footer1-2" class="p-y-md footer f1 bg-edit bg-dark">
         <div class="container">
+
+            <div class="top-bar bot-bar">
+                <!-- Working Hours -->
+                <div class="schedule text-edit">
+                    <i class="icon-clock2"></i> <span>Schedule:</span> Mon-Sat 8:00-18:00, Sun 8:00-14:00
+                </div>
+                <!-- Contact Info -->
+                <div class="contact-info text-edit">
+                    <div class="email m-r-lg"><i class="icon-envelope"></i><a href="mailto:info@yourmail.com">info@youremail.com</a></div>
+                    <div class="phone"><i class="icon-phone3"></i><span>Call us at:</span> (+00) 123 7890 456</div>
+                </div>
+            </div>
+
             <div class="row">
                 <!-- Copy -->
                 <div class="col-sm-8 text-white">

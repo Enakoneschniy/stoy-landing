@@ -9,7 +9,7 @@ class Menu extends Model
     public $fillable = ['title', 'url', 'active'];
 
     public function getMenu(){
-        return $this->publiched()->get();
+        return $this->published()->get();
     }
 
     public function scopePublished($query){

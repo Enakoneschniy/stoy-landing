@@ -54,7 +54,6 @@
 <body data-spy="scroll" data-target="#main-navbar">
 
 <!-- Preloader -->
-
 <div class="loader bg-white">
     <div class="loader-inner ball-scale-ripple-multiple vh-center">
         <div></div>
@@ -72,13 +71,17 @@
         <section class="top-bar bg-edit">
             <div class="container p-l-0">
                 <!-- Working Hours -->
-                <div class="schedule text-edit">
-                    <i class="icon-clock2"></i> <span>Schedule:</span> Mon-Sat 8:00-18:00, Sun 8:00-14:00
-                </div>
+                {{--<div class="schedule text-edit">--}}
+                    {{--<i class="icon-clock2"></i> <span>Schedule:</span> Mon-Sat 8:00-18:00, Sun 8:00-14:00--}}
+                {{--</div>--}}
                 <!-- Contact Info -->
                 <div class="contact-info text-edit">
-                    <div class="email m-r-lg"><i class="icon-envelope"></i><a href="mailto:info@yourmail.com">info@youremail.com</a></div>
-                    <div class="phone"><i class="icon-phone3"></i><span>Call us at:</span> (+00) 123 7890 456</div>
+                    @if($contact->email)
+                        <div class="email m-r-lg"><i class="icon-envelope"></i><a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></div>
+                    @endif
+                    @if($contact->phone)
+                        <div class="phone"><i class="icon-phone3"></i><span>Call us at:</span>{{ $contact->phone }}</div>
+                    @endif
                 </div>
             </div><!-- /End Container -->
         </section>
@@ -113,11 +116,11 @@
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <!-- Menu Links -->
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="" class="smooth-scroll">Section 2</a></li>
-                        <li><a href="" class="smooth-scroll">Section 3</a></li>
-                        <li><a href="" class="smooth-scroll">Section 4</a></li>
-                        <li><a href="" class="smooth-scroll">Section 5</a></li>
-                        <li><a href="" class="btn-nav btn-green smooth-scroll">Get Action</a></li>
+                        @foreach($menu as $point)
+                            @if($point->active)
+                                <li><a href="{{ $point->url }}" class="smooth-scroll">{{ $point->title }}</a></li>
+                            @endif
+                        @endforeach
                     </ul>
                 </div><!-- /End Navbar Collapse -->
 
@@ -168,13 +171,17 @@
 
             <div class="top-bar bot-bar">
                 <!-- Working Hours -->
-                <div class="schedule text-edit">
-                    <i class="icon-clock2"></i> <span>Schedule:</span> Mon-Sat 8:00-18:00, Sun 8:00-14:00
-                </div>
+                {{--<div class="schedule text-edit">--}}
+                    {{--<i class="icon-clock2"></i> <span>Schedule:</span> Mon-Sat 8:00-18:00, Sun 8:00-14:00--}}
+                {{--</div>--}}
                 <!-- Contact Info -->
                 <div class="contact-info text-edit">
-                    <div class="email m-r-lg"><i class="icon-envelope"></i><a href="mailto:info@yourmail.com">info@youremail.com</a></div>
-                    <div class="phone"><i class="icon-phone3"></i><span>Call us at:</span> (+00) 123 7890 456</div>
+                    @if($contact->email)
+                        <div class="email m-r-lg"><i class="icon-envelope"></i><a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></div>
+                    @endif
+                    @if($contact->phone)
+                        <div class="phone"><i class="icon-phone3"></i><span>Call us at:</span>{{ $contact->phone }}</div>
+                    @endif
                 </div>
             </div>
 

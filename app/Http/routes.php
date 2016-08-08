@@ -13,9 +13,7 @@
 
 Route::auth();
 
-Route::get('/', function () {
-    return view('index.index');
-});
+Route::get('/', 'IndexController@index');
 
 Route::get('/news', function () {
     return view('news.list');

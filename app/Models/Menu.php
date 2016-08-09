@@ -13,6 +13,6 @@ class Menu extends Model
     }
 
     public function scopePublished($query){
-        $query->where('active', 1);
+        return $query->where('active', 1);
     }
 }

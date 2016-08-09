@@ -17,6 +17,8 @@ class CreateCallbacksTable extends Migration
             $table->string('name');
             $table->string('phone');
             $table->boolean('active');
+            $table->string('status');
+            $table->text('comment');
             $table->timestamps();
         });
     }

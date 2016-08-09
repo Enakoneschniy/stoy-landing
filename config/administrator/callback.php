@@ -23,6 +23,14 @@ return [
             'date_format' => 'dd.mm.yy', //optional, will default to this value
             'time_format' => 'HH:mm',    //optional, will default to this value
         ],
+        'status' => [
+            'type' => 'text',
+            'title' => 'Статус'
+        ],
+        'comment' => [
+            'type' => 'text',
+            'title' => 'Комментарий'
+        ],
         'active' => [
             'type' => 'bool',
             'title' => 'Активность',
@@ -34,6 +42,11 @@ return [
             'type' => 'bool',
             'title' => 'Активность'
         ],
+        'status' => [
+            'type' => 'enum',
+            'options' => ['Активнй', 'Перезвонить', 'Жду ответ', 'Клиент'],
+            'title' => 'Статус'
+        ],
         'name' => [
             'type' => 'text',
             'title' => 'Имя',
@@ -41,12 +54,22 @@ return [
         'phone' => [
             'type' => 'text',
             'title' => 'Телефон'
-        ]
+        ],
+
+        'comment' => [
+            'type' => 'textarea',
+            'title' => 'Комментарий'
+        ],
     ],
     'filters' =>[
         'active' => [
             'type' => 'bool',
             'title' => 'Активность'
+        ],
+        'status' => [
+            'type' => 'enum',
+            'options' => ['Активнй', 'Перезвонить', 'Жду ответ', 'Клиент'],
+            'title' => 'Статус'
         ],
         'name' => [
             'type' => 'text',

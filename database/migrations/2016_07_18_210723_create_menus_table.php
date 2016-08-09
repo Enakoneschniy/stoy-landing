@@ -16,6 +16,7 @@ class CreateMenusTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('url');
+            $table->integer('sort');
             $table->boolean('active');
             $table->timestamps();
         });

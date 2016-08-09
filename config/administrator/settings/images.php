@@ -3,6 +3,14 @@
 return [
     'title' => 'Картинки в хедере и футере',
     'edit_fields' => [
+        'title_header' => [
+            'title' => 'Заголовок в хедере',
+            'type' => 'textarea'
+        ],
+        'description_header' => [
+            'title' => 'Описание в хедере',
+            'type' => 'textarea'
+        ],
         'header_image' =>[
             'title' => 'Картинка в хедере',
             'type' => 'image',

@@ -15,22 +15,26 @@ class MenuSeeder extends Seeder
             [
                 'title' => 'Главная',
                 'url' => '/',
-                'active' => 1
+                'active' => 1,
+                'sort' => 1
             ],
             [
                 'title' => 'Портфолило',
-                'url' => '/#portfolio',
-                'active' => 1
+                'url' => '#portfolio',
+                'active' => 1,
+                'sort' => 3
             ],
             [
                 'title' => 'Виды работ',
-                'url' => '/#services',
-                'active' => 1
+                'url' => '#services',
+                'active' => 1,
+                'sort' => 2
             ],
             [
                 'title' => 'Блог',
-                'url' => '/#blog',
-                'active' => 1
+                'url' => '#blog',
+                'active' => 1,
+                'sort' => 4
             ]
         ]);
     }

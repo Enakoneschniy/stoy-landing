@@ -68,6 +68,7 @@ return array(
     'menu' => array(
         'news',
         'menu',
+        'services',
         'callback',
         'projects',
         'portfolio',

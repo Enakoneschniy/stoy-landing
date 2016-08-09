@@ -16,6 +16,10 @@ return [
             'type' => 'text',
             'title' => 'Ссылка'
         ],
+        'sort' => [
+            'type' => 'number',
+            'title' => 'Сортировка'
+        ],
         'active' => [
             'type' => 'bool',
             'title' => 'Активность',
@@ -37,6 +41,10 @@ return [
         'url' => [
             'type' => 'text',
             'title' => 'Ссылка'
+        ],
+        'sort' => [
+            'type' => 'number',
+            'title' => 'Сортировка'
         ],
     ],
     'filters' => [

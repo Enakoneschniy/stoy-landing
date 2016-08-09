@@ -36,10 +36,10 @@
     </section><!-- =========================
            FEATURES SECTION
         ============================== -->
-    <section id="features4-1" class="p-y-lg bg-edit">
-        <div class="container">
+    <section id="services" class="p-y-lg bg-edit" >
+        <div class="container" >
             <!-- Section Header -->
-            <div class="row">
+            <div class="row" >
                 <div class="col-md-8 col-md-offset-2">
                     <div class="section-header text-center wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
                         <h2 class="wow animated animated animated animated animated" style="visibility: visible;">Виды работ</h2>
@@ -84,7 +84,7 @@
     </section><!-- =========================
            PORTFOLIO
         ============================== -->
-    <section id="portfolio1-2" class="p-y-lg bg-edit bg-dark">
+    <section id="portfolio" class="p-y-lg bg-edit bg-dark">
 
         <!-- Section Header -->
         <div class="container">
@@ -212,7 +212,7 @@
     </section><!-- =========================
              BLOG SECTION
         ============================== -->
-    <section id="blog2-1" class="p-y-lg blog bg-edit">
+    <section id="blog" class="p-y-lg blog bg-edit">
         <div class="container">
             <!-- Section Header -->
             <div class="row">

@@ -4596,4 +4596,31 @@ input.toggle-round-flat:checked + label:after {
 .comments-list .comment-info .reply i{
     margin-right: 2px;
 }
-
+.top-bar.bot-bar {
+    color: white;
+    opacity: 1;
+    border-bottom: 0;
+    padding-right: 0;
+    margin-bottom: 20px;
+}
+.top-bar.bot-bar .contact-info .email a {
+    color: white;
+}
+.navbar-brand.smooth-scroll{
+    color: #404B55;
+}
+.navbar-brand>img {
+    display: block;
+    height: 35px;
+    float: left;
+    margin-right: 9px;
+}
+.navbar-nav>li>a {
+    line-height: 30px;
+}
+.navbar-nav>li>a {
+    font-size: 21px;
+}
+.navbar{
+    padding: 10px;
+}

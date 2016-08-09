@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'Портфолио проектов',
+    'title' => 'Портфолио объектов',
     'single' => 'картинку',
     'model' => 'App\Models\Portfolio',
     'form_width' => 600,
@@ -18,7 +18,7 @@ return [
             'title' => 'Заголовок'
         ],
         'project' => [
-            'title' => 'Проект',
+            'title' => 'Объект',
             'type' => 'relationship',
             'name_field' => 'title',
             'output' => function($value, $model)
@@ -43,7 +43,7 @@ return [
             'title' => 'Заголовок'
         ],
         'project' => [
-            'title' => 'Проект',
+            'title' => 'Объект',
             'type' => 'relationship',
             'relationship' => 'App\Models\Project',
             'name_field' => 'title'
@@ -73,9 +73,10 @@ return [
             'title' => 'Заголовок'
         ],
         'project' => [
-            'title' => 'Проект',
+            'title' => 'Объект',
             'type' => 'relationship',
-            'relationship' => 'App\Models\Project'
+            'relationship' => 'App\Models\Project',
+            'name_field' => 'title'
         ],
     ]
 ];

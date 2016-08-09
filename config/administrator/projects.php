@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'title' => 'Проекты',
-    'single' => 'проект',
+    'title' => 'Объекты',
+    'single' => 'объект',
     'model' => 'App\Models\Project',
     'form_width' => 600,
     'columns' => [

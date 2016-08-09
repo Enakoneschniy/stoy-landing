@@ -13,6 +13,17 @@ $(window).on('load', function() {
     $(".loader-inner").fadeOut();
     // will fade out the whole DIV that covers the website.
     $(".loader").fadeOut("slow");
+    $('.smooth-scroll').click( function(){ // ловим клик по ссылке с классом go_to
+        var scroll_el = $(this).attr('href').replace('/', ''); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+        console.log(scroll_el);
+        if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
+            var position = $(scroll_el).offset().top;
+            $('html, body').animate({ scrollTop: position }, 500); // анимируем скроолинг к элементу scroll_el
+        }
+        return false; // выключаем стандартное действие
+    });
+});
+$(document).ready(function(){
 
 });
 

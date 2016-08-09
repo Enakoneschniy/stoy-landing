@@ -31,6 +31,7 @@ return [
             'type' => 'bool',
             'title' => 'Активность',
             'editable' => true,
+            'select' => "IF((:table).active, 'Да', 'Нет')",
         ],
 
     ],
@@ -52,14 +53,14 @@ return [
             'title' => 'Полное описание'
         ],
         'image' => [
-            'title' => 'Превью картинка',
+            'title' => 'Картинка',
             'type' => 'image',
             'naming' => 'random',
             'location' => public_path().'/uploads/posts/origin/',
             'sizes' => [
-                [85, 60, 'crop', public_path().'/uploads/posts/resize/detail/admin', 100],
-                [750, 500, 'crop', public_path().'/uploads/posts/resize/public', 100],
-                [75, 50, 'crop', public_path().'/uploads/posts/resize/preview/public', 100],
+                [85, 60, 'crop', public_path().'/uploads/posts/resize/admin/', 100],
+                [750, 500, 'crop', public_path().'/uploads/posts/resize/', 100],
+                [75, 50, 'crop', public_path().'/uploads/posts/resize/preview/', 100],
             ],
         ]
     ],

@@ -67,6 +67,9 @@ return array(
      */
     'menu' => array(
         'news',
+        'callback',
+        'projects',
+        'portfolio',
         'Settings' => [
             'settings.contact',
             'settings.images'

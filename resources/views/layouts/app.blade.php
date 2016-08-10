@@ -132,7 +132,7 @@
 
     @yield('content')
 
-    <section id="subscription5-3" class="p-y-lg subscription bg-edit bg-img" style="background-image:url('{{ URL::asset('images/uploads/bottom.jpg') }}')">
+    <section id="subscription5-3" class="p-y-lg subscription bg-edit bg-img" style="background-image:url('/uploads/images/resize/{{$data->footer_image}}')">
         <div class="overlay"></div>
         <div class="container">
             <!-- Section Header -->
@@ -192,11 +192,7 @@
                 </div>
                 <!-- Social Links -->
                 <div class="col-sm-4">
-                    <ul class="footer-social inverse">
-                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fa fa-instagram"></i></a></li>
-                    </ul>
+
                 </div>
             </div><!-- /End Row -->
         </div><!-- /End Container -->

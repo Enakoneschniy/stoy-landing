@@ -1,16 +1,15 @@
 @extends('.layouts/app')
 
 @section('content')
-    <section id="hero9" class="bg-img hero-leadbox content-align-md" style="background-image:url('images/uploads/top_img.jpg');">
+    <section id="hero9" class="bg-img hero-leadbox content-align-md" style="background-image:url('/uploads/images/resize/{{$data->header_image}}');">
         <div class="overlay"></div>
 
         <div class="container">
             <div class="row y-middle">
                 <!-- Intro Text -->
                 <div class="col-sm-12 col-md-5 center-md text-white">
-                    <h1>Turn every project into a success story</h1>
-                    <p class="lead f-w-700">Get started with a 30-day free trial – No credit card required.</p>
-                    <p class="m-t-md">Nesciunt quasi id vero porro, facere ducimus quis officiis nobis pariatur corrupti alias, deleniti earum perspiciatis neque sunt fugiat saepe impedit reiciendis iusto. Voluptas minima nobis ipsa rerum fugiat explicabo corporis.</p>
+                    <h1>{{$data->title_header}}</h1>
+                    <p class="m-t-md">{{$data->description_header}}</p>
                 </div>
                 <div class="col-sm-12 col-md-5 col-md-offset-1">
                     <!-- Mailchimp Form -->
@@ -49,35 +48,24 @@
             <!-- Features Row -->
             <div class="row features-block wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
                 <div class="col-md-10 col-md-offset-1 c2">
-                    <div class="col-sm-6 img-left clearfix">
-                        <img src="images/uploads/fasad.jpg" alt="">
-                        <h5 class="m-t f-w-900">Утепление фасадов</h5>
-                        <p>Odit non officiis vitae eaque quo temporibus blanditiis excepturi facilis, dolore provident et eligendi ut asperiores perferendis, maxime optio tempora.</p>
-                    </div>
-                    <div class="col-sm-6 img-left clearfix">
-                        <img src="images/uploads/remont.png" alt="">
-                        <h5 class="m-t f-w-900">Ремонтно-отделочные</h5>
-                        <p>Omnis nam quibusdam fugiat consectetur quasi iste, aspernatur eaque doloremque, magni dolores deserunt impedit fugit error consequuntur esse.</p>
-                    </div>
+                    @foreach($services as $key => $service)
+                        @if($key%2 == 0)
+                                </div>
+                            </div>
+                            <div class="row features-block wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                                <div class="col-md-10 col-md-offset-1 c2">
+                        @endif
+                        <div class="col-sm-6 img-left clearfix">
+                            <img src="/uploads/service/resize/preview/{{$service->image}}" alt="">
+                            <h5 class="m-t f-w-900">{{$service->title}}</h5>
+                            {!! $service->describe !!}
+                        </div>
+
+                    @endforeach
                 </div>
             </div>
-            <!-- Features Row -->
-            <div class="row features-block wow fadeIn new-row-sm" style="visibility: visible; animation-name: fadeIn;">
-                <div class="col-md-10 col-md-offset-1 c2">
-                    <div class="col-sm-6 img-left clearfix">
-                        <img src="images/uploads/sant.jpg" alt="">
-                        <h5 class="m-t f-w-900">Сантехника</h5>
-                        <p>Neque iure, illum consequatur quidem laudantium veritatis labore fuga inventore totam, at quos deserunt quae expedita aliquam, perspiciatis saepe.</p>
-                    </div>
-                    <div class="col-sm-6 img-left clearfix">
-                        <img src="images/uploads/otopl.jpg" alt="">
-                        <h5 class="m-t f-w-900">Отопление</h5>
-                        <p>Deserunt impedit fugit error consequuntur esse, deleniti libero aspernatur ad assumenda, laudantium saepe similique facere eaque.</p>
-                    </div>
-                </div>
-            </div><!-- /End Features Row -->
             <div class="col-md-8 col-md-offset-2 text-center p-t-md wow fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
-                <a href="#" class="btn btn-shadow btn-blue text-uppercase">ПОСМОТРЕТЬ ЕЩЕ ВИДЫ</a>
+                <a href="{{url('services')}}" class="btn btn-shadow btn-blue text-uppercase">ПОСМОТРЕТЬ ЕЩЕ ВИДЫ</a>
             </div>
 
         </div><!-- /End Container -->
@@ -110,7 +98,7 @@
                                     <h5>Tech Coffee</h5>
                                     <p class="small">Liber theophrastus ea est, vel unum ubique feugait in. Has ne albucius tincidunt.</p>
                                     <!-- View More Button -->
-                                    <a href="images/portfolio1-xl.jpg" class="btn btn-blue m-b-0 mp-gallery" title="Project 1 - with description">View More</a>
+                                    <a href="#" class="btn btn-blue m-b-0" title="Project 1 - with description">View More</a>
                                 </div>
                             </figcaption>
                         </figure>
@@ -127,7 +115,7 @@
                                     <h5>Image Filter</h5>
                                     <p class="small">Quodsi volutpat persequeris cu vel, sea te dolorum dissentiet. Per an dicunt causae, id ipsum.</p>
                                     <!-- View More Button -->
-                                    <a href="images/portfolio2-xl.jpg" class="btn btn-blue m-b-0 mp-gallery" title="Project 2 - with description">View More</a>
+                                    <a href="#" class="btn btn-blue m-b-0 mp-gallery" title="Project 2 - with description">View More</a>
                                 </div>
                             </figcaption>
                         </figure>

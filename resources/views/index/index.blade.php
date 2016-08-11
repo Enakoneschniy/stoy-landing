@@ -87,25 +87,25 @@
 
         <div class="container">
             <div class="row">
-                <!-- Portfolio Item -->
-                <div class="col-md-4 col-sm-6 m-b-md clearfix">
-                    <div class="h caption-1 wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
-                        <!-- Item Image -->
-                        <figure><img src="images/portfolio1-sm.jpg" class="img-responsive" alt="">
-                            <!-- Item Caption -->
-                            <figcaption>
-                                <div class="caption-box vertical-center-abs text-center">
-                                    <h5>Tech Coffee</h5>
-                                    <p class="small">Liber theophrastus ea est, vel unum ubique feugait in. Has ne albucius tincidunt.</p>
-                                    <!-- View More Button -->
-                                    <a href="#" class="btn btn-blue m-b-0" title="Project 1 - with description">View More</a>
-                                </div>
-                            </figcaption>
-                        </figure>
+                @foreach($projects as $project)
+                    <div class="col-md-4 col-sm-6 m-b-md clearfix">
+                        <div class="h caption-1 wow zoomIn" style="visibility: visible; animation-name: zoomIn;">
+                            <!-- Item Image -->
+                            <figure><img src="/uploads/projects/resize/preview/{{$project->image}}" class="img-responsive" alt="{{$project->title}}">
+                                <!-- Item Caption -->
+                                <figcaption>
+                                    <div class="caption-box vertical-center-abs text-center">
+                                        <h5>{{$project->title}}</h5>
+                                        <p class="small">{!! $project->describe !!}</p>
+                                        <!-- View More Button -->
+                                        <a href="{{url('projects', $project->id)}}" class="btn btn-blue m-b-0" title="Project 1 - with description">Подробнее</a>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
                     </div>
-                </div>
-                <!-- Portfolio Item -->
-                <div class="col-md-4 col-sm-6 m-b-md clearfix">
+                @endforeach
+               {{-- <div class="col-md-4 col-sm-6 m-b-md clearfix">
                     <div class="h caption-1 wow zoomIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: zoomIn;">
                         <!-- Item Image -->
                         <figure><img src="images/portfolio2-sm.jpg" class="img-responsive" alt="">
@@ -188,12 +188,12 @@
                             </figcaption>
                         </figure>
                     </div>
-                </div>
+                </div>--}}
             </div><!-- /End Portfolio Row-->
 
             <!-- Portfolio Footer Cta -->
             <div class="col-md-8 col-md-offset-2 text-center text-white p-t-md wow fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
-                <a href="#" class="btn btn-shadow btn-blue text-uppercase">ПОСМОТРЕТЬ БОЛЬШЕЕ...</a>
+                <a href="{{url('projects')}}" class="btn btn-shadow btn-blue text-uppercase">ПОСМОТРЕТЬ БОЛЬШЕ...</a>
             </div>
 
         </div><!-- /End Container -->

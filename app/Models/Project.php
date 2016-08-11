@@ -13,11 +13,11 @@ class Project extends Model
     }
     
     public function getLatestProjects($count = 6){
-        return $this->published()->orderBy('created_at', 'asc')->take($count)->get();    
+        return $this->published()->orderBy('created_at', 'desc')->take($count)->get();
     }
 
-    public function getActivePosts(){
-        return $this->published()->orderBy('created_at', 'asc')->get();
+    public function getActiveProjects(){
+        return $this->published()->orderBy('created_at', 'desc')->get();
     }
     
     public function scopePublished($query){

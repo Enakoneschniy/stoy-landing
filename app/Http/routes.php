@@ -17,14 +17,11 @@ Route::get('/', 'IndexController@index');
 Route::get('/projects', 'ProjectController@index');
 Route::get('/projects/{id}', 'ProjectController@detail');
 
-Route::get('/news', function () {
-    return view('news.list');
-});
+Route::get('/news', 'NewsController@getNewsList');
 
-Route::get('/news/{id}', function () {
+Route::get('/news/{id}', 'NewsController@getPost');
 
-    return view('news.detail');
-});
+Route::get('/services', 'ServicesController@getServices');
 
 /*Route::get('/portfolio', function () {
     return view('portfolio.list');

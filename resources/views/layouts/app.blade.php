@@ -105,7 +105,7 @@
                         width: 150px;
                         height: 35px;
                     -->
-                    <a href="" class="navbar-brand smooth-scroll"><img src="{{ URL::asset('images/homelogo.png') }}" alt="logo"><h3 style="float: left;">Профтеплострой</h3></a>
+                    <a href="/" class="navbar-brand smooth-scroll"><img src="{{ URL::asset('images/homelogo.png') }}" alt="logo"><h3 style="float: left;">Профтеплострой</h3></a>
                     <!-- Image Logo For Background Transparent -->
                     <!--
                         <a href="#" class="navbar-brand logo-black smooth-scroll"><img src="images/logo-black.png" alt="logo" /></a>

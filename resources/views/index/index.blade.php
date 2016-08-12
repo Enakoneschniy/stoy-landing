@@ -213,52 +213,30 @@
 
             <div class="row">
                 <div class="col-md-12 content-block c3">
-                    <!-- Blog Post -->
-                    <div class="col-sm-4">
-                        <a href=""><img src="images/img-1.jpg" alt="" class="img-responsive img-rounded"></a>
-                        <div class="post-info bg-edit">
-                            <div class="date">
-                                <span class="day">25</span>
-                                Nov
+                    @foreach($posts as $post)
+                        <!-- Blog Post -->
+                            <div class="col-sm-4">
+                                @if($post->image)
+                                    <a href="/news/{{ $post->id }}"><img src="/uploads/posts/resize/{{ $post->image }}" alt="" class="img-responsive img-rounded"></a>
+                                @else
+                                    <a href="/news/{{ $post->id }}"><img src="images/img-1.jpg" alt="" class="img-responsive img-rounded"></a>
+                                @endif
+                                <div class="post-info bg-edit">
+                                    <div class="date">
+                                        <span class="day"><?=date('d', strtotime($post->created_at))?></span>
+                                        <?=date('M', strtotime($post->created_at))?>
+                                    </div>
+                                    <a href="/news/{{ $post->id }}"><h5>{{ $post->title }}</h5></a>
+                                    {{--<h6 class="p-opacity">Posted by Harold Butler in <strong>Web Design</strong></h6>--}}
+                                </div>
+                                <p class="p-opacity">{!! $post->preview_text !!}</p>
+                                <a href="/news/{{ $post->id }}" class="more-link edit">Читать далее...</a>
                             </div>
-                            <a href=""><h5>10 tools every web designer should have</h5></a>
-                            <h6 class="p-opacity">Posted by Harold Butler in <strong>Web Design</strong></h6>
-                        </div>
-                        <p class="p-opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, odio eum magni optio laborum non et accusamus, itaque.</p>
-                        <a href="" class="more-link edit">Continue Reading ...</a>
-                    </div>
-                    <!-- Blog Post -->
-                    <div class="col-sm-4">
-                        <a href=""><img src="images/img-1.jpg" alt="" class="img-responsive img-rounded"></a>
-                        <div class="post-info bg-edit">
-                            <div class="date">
-                                <span class="day">12</span>
-                                Oct
-                            </div>
-                            <a href=""><h5>Your Start-to-Finish Guide to Link Building&nbsp;</h5></a>
-                            <h6 class="p-opacity">Posted by Anthony Kim in <strong>SEO</strong></h6>
-                        </div>
-                        <p class="p-opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, odio eum magni optio laborum non et accusamus, itaque.</p>
-                        <a href="" class="more-link edit">Continue Reading ...</a>
-                    </div>
-                    <!-- Blog Post -->
-                    <div class="col-sm-4">
-                        <a href=""><img src="images/img-1.jpg" alt="" class="img-responsive img-rounded"></a>
-                        <div class="post-info">
-                            <div class="date text-edit">
-                                <span class="day">26</span>
-                                Sep
-                            </div>
-                            <a href=""><h5>The Journey to Product Market Fit</h5></a>
-                            <h6 class="p-opacity">Posted by Carl Bradley in <strong>Startup</strong></h6>
-                        </div>
-                        <p class="p-opacity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, odio eum magni optio laborum non et accusamus, itaque.</p>
-                        <a href="" class="more-link edit">Continue Reading ...</a>
-                    </div>
+                    @endforeach
                 </div>
             </div><!-- /End Row -->
             <div class="col-md-8 col-md-offset-2 text-center text-white p-t-md wow fadeIn" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeIn;">
-                <a href="#" class="btn btn-shadow btn-blue text-uppercase">ЧИТАТЬ БОЛЬШЕ СТАТТЕЙ</a>
+                <a href="/news/" class="btn btn-shadow btn-blue text-uppercase">ЧИТАТЬ БОЛЬШЕ СТАТТЕЙ</a>
             </div>
         </div><!-- /End Container -->
 

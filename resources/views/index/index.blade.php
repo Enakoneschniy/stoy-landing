@@ -13,21 +13,21 @@
                 </div>
                 <div class="col-sm-12 col-md-5 col-md-offset-1">
                     <!-- Mailchimp Form -->
-                    <form class="form-horizontal form-white bg-grey text-white" id="mailchimpForm">
+                    {!! Form::open(['class' => 'form-horizontal form-white bg-grey text-white', 'id' => 'callbackFromIndex']) !!}
                         <h4 class="text-center">Оставить заявку</h4>
                         <p class="text-center m-b-md">
                             Заполните форму и мы свами свяжимся в ближайшее время!
                         </p>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="m3Name" placeholder="Имя" name="NAME" required="">
+                            {!! Form::text('name', null, ['class' => 'form-control', 'id' => 'm3Name', 'placeholder' => 'Имя']) !!}
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="m3Phone" placeholder="Номер телефона" name="PHONE" required="">
+                            {!! Form::text('phone', null, ['class' => 'form-control', 'id' => 'm3Phone', 'placeholder' => 'Номер телефона']) !!}
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-shadow btn-green">ОТПРАВИТЬ ЗАЯВКУ</button>
+                            {!! Form::submit('ОТПРАВИТЬ ЗАЯВКУ', ['class' => 'btn btn-shadow btn-green']) !!}
                         </div>
-                    </form>
+                    {!! Form::close() !!}
                 </div><!-- /End  Form -->
             </div><!-- /End Row -->
         </div><!-- /End Container -->

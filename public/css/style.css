@@ -4633,3 +4633,10 @@ input.toggle-round-flat:checked + label:after {
 .top-bar.bot-bar .contact-info .email a {
     color: #eff1f4;
 }
+
+form .error {
+    color: red;
+}
+form .btn-shadow.btn-green {
+    width: 100%;
+}

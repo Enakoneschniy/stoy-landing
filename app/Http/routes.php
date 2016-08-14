@@ -23,6 +23,8 @@ Route::get('/news/{id}', 'NewsController@getPost');
 
 Route::get('/services', 'ServicesController@getServices');
 
+Route::post('/addcallback', ['before' => 'csrf', 'uses' => 'CallbackController@addCallback']);
+
 /*Route::get('/portfolio', function () {
     return view('portfolio.list');
 });*/

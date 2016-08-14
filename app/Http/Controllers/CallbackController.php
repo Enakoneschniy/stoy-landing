@@ -21,11 +21,14 @@ class CallbackController extends Controller
             $callback->status = 'Активный';
             $callback->save();
             $arrCallback = $callback->toArray();
+            $contact = file_get_contents(storage_path() . '/administrator_settings/contact.json');
+            $resContact = json_decode($contact);
+            $arrCallback['email'] = $resContact->email;
             Mail::send('emails.callback', $arrCallback, function($message) use ($arrCallback)
             {
                 $message->from(env('MAIL_USERNAME'), 'Profteplostroy')
                     ->subject('Добавление новой заявки')
-                    ->to(env('MAIL_USERNAME'));
+                    ->to($arrCallback['email']);
             });
             return 'Add callback';
         } else {

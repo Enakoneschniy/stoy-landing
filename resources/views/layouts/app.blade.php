@@ -151,7 +151,7 @@
                             {!! Form::text('name', null, ['class' => 'form-control', 'id' => 'm2Name', 'placeholder' => 'Имя']) !!}
                         </div>
                         <div class="form-group">
-                            {!! Form::text('phone', null, ['class' => 'form-control', 'id' => 'm2Email', 'placeholder' => 'Телефон']) !!}
+                            {!! Form::text('phone', null, ['class' => 'form-control', 'id' => 'm3PhoneLayout', 'placeholder' => 'Телефон']) !!}
                         </div>
                         <div class="form-group">
                             {!! Form::submit('ОТПРАВИТЬ ЗАЯВКУ', ['class' => 'btn btn-shadow btn-green btn-md']) !!}
@@ -219,6 +219,7 @@
 <script src="{{ URL::asset('js/plugins/picker.js') }}"></script>
 <script src="{{ URL::asset('js/plugins/picker.date.js') }}"></script>
 <script src="{{ URL::asset('js/plugins/jquery.validate.min.js') }}"></script>
+<script src="{{ URL::asset('js/plugins/jquery.maskedinput.min.js') }}"></script>
 <!-- Custom Script -->
 <script src="{{ URL::asset('js/custom.js') }}"></script>
 

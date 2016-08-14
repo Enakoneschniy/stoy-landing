@@ -606,8 +606,8 @@ $("#callbackFrom").validate({
         phone: {
             required: true,
             minlength: 4,
-            maxlength: 16,
-            digits: true
+            maxlength: 18,
+            //digits: true
         },
 
         name: {
@@ -618,10 +618,10 @@ $("#callbackFrom").validate({
 
     messages:{
         phone: {
-            digits: "В поле телефон могут быть только цифры",
+            //digits: "В поле телефон могут быть только цифры",
             required: "Это поле обязательно для заполнения",
             minlength: "Телефон должен состоять минимум из 4-х цифр",
-            maxlength: "Телефон не может состоять больше чем из 16 цифр"
+            maxlength: "Телефон не может состоять больше чем из 18 цифр"
         },
 
         name: {
@@ -644,8 +644,8 @@ $("#callbackFromIndex").validate({
         phone: {
             required: true,
             minlength: 4,
-            maxlength: 16,
-            digits: true
+            maxlength: 18
+            //digits: true
         },
 
         name: {
@@ -656,10 +656,10 @@ $("#callbackFromIndex").validate({
 
     messages:{
         phone: {
-            digits: "В поле телефон могут быть только цифры",
+            //digits: "В поле телефон могут быть только цифры",
             required: "Это поле обязательно для заполнения",
             minlength: "Телефон должен состоять минимум из 4-х цифр",
-            maxlength: "Телефон не может состоять больше чем из 16 цифр"
+            maxlength: "Телефон не может состоять больше чем из 18 цифр"
         },
 
         name: {
@@ -677,17 +677,21 @@ $("#callbackFromIndex").validate({
 
 });
 
-$('body').on('submit', '#callbackFrom, callbackFromIndex', function () {
+$('#m3Phone').mask("+38 (999) 999-9999");
+$('#m3PhoneLayout').mask("+38 (999) 999-9999");
+
+$('body').on('submit', '#callbackFrom, #callbackFromIndex', function () {
     $.ajaxSetup({
         header:$(this).find('input[name="_token"]').val()
     });
+    var _that = this;
 
     $.ajax({
         url: '/addcallback',
         type:"POST",
         data: $(this).serialize(),
         success: function(data){
-
+            $(_that).find('.btn-green').val('ОТПРАВЛЕНО');
             console.log(data);
         },
         error: function(data){

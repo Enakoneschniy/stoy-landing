@@ -9,7 +9,9 @@
                         <div class="blog-list">
                             <div class="blog-post">
                                 @if($post->video)
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $post->video }}" allowfullscreen=""></iframe>
+                                    <div class="videoWrapper">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $post->video }}" allowfullscreen=""></iframe>
+                                    </div>
                                 @elseif($post->image)
                                     <img src="/uploads/posts/resize/{{ $post->image }}" alt="">
                                 @endif

@@ -52,6 +52,11 @@ return [
             'type' => 'wysiwyg',
             'title' => 'Полное описание'
         ],
+        'video' => [
+            'type' => 'text',
+            'title' => 'Видео с YouTube',
+
+        ],
         'image' => [
             'title' => 'Картинка',
             'type' => 'image',

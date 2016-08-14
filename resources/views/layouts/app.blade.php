@@ -2,8 +2,6 @@
 <html><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- TITLE OF SITE -->
     <title>Your Page Title Goes here..</title>
 
@@ -105,7 +103,7 @@
                         width: 150px;
                         height: 35px;
                     -->
-                    <a href="" class="navbar-brand smooth-scroll"><img src="{{ URL::asset('images/homelogo.png') }}" alt="logo"><h3 style="float: left;">Профтеплострой</h3></a>
+                    <a href="/" class="navbar-brand smooth-scroll"><img src="{{ URL::asset('images/homelogo.png') }}" alt="logo"><h3 style="float: left;">Профтеплострой</h3></a>
                     <!-- Image Logo For Background Transparent -->
                     <!--
                         <a href="#" class="navbar-brand logo-black smooth-scroll"><img src="images/logo-black.png" alt="logo" /></a>
@@ -148,17 +146,17 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <!-- Mailchimp Form -->
-                    <form class="form-horizontal form-white form-margin text-white" id="mailchimpForm">
+                    {!! Form::open(['class' => 'form-horizontal form-white form-margin text-white', 'id' => 'callbackFrom']) !!}
                         <div class="form-group">
-                            <input type="text" class="form-control" id="m2Name" placeholder="Имя" name="NAME" required="">
+                            {!! Form::text('name', null, ['class' => 'form-control', 'id' => 'm2Name', 'placeholder' => 'Имя']) !!}
                         </div>
                         <div class="form-group">
-                            <input type="tel" class="form-control" id="m2Email" placeholder="Телефон" name="PHONE" required="">
+                            {!! Form::text('phone', null, ['class' => 'form-control', 'id' => 'm2Email', 'placeholder' => 'Телефон']) !!}
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-shadow btn-green btn-md">ОТПРАВИТЬ ЗАЯВКУ</button>
+                            {!! Form::submit('ОТПРАВИТЬ ЗАЯВКУ', ['class' => 'btn btn-shadow btn-green btn-md']) !!}
                         </div>
-                    </form>
+                    {!! Form::close() !!}
                 </div>
             </div><!-- /End Row -->
         </div><!-- /End Container -->
@@ -211,7 +209,6 @@
 <script src="{{ URL::asset('js/plugins/bootstrap.min.js') }}"></script>
 <script src="{{ URL::asset('js/plugins/jquery.easing.1.3.min.js') }}"></script>
 <script src="{{ URL::asset('js/plugins/jquery.countTo.js') }}"></script>
-<script src="{{ URL::asset('js/plugins/jquery.formchimp.min.js') }}"></script>
 <script src="{{ URL::asset('js/plugins/jquery.jCounter-0.1.4.js') }}"></script>
 <script src="{{ URL::asset('js/plugins/jquery.magnific-popup.min.js') }}"></script>
 <script src="{{ URL::asset('js/plugins/jquery.vide.min.js') }}"></script>
@@ -221,6 +218,7 @@
 <script src="{{ URL::asset('js/plugins/wow.min.js') }}"></script>
 <script src="{{ URL::asset('js/plugins/picker.js') }}"></script>
 <script src="{{ URL::asset('js/plugins/picker.date.js') }}"></script>
+<script src="{{ URL::asset('js/plugins/jquery.validate.min.js') }}"></script>
 <!-- Custom Script -->
 <script src="{{ URL::asset('js/custom.js') }}"></script>
 

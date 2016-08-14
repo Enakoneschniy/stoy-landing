@@ -315,9 +315,9 @@ if( $('.countdown').length ) {
 /* ===========================================================
    MAILCHIMP
 ============================================================== */
-if( $('#mailchimpForm').length ) {
+/*if( $('#mailchimpForm').length ) {
     $("#mailchimpForm").formchimp(); 
-}
+}*/
 
 
 /* ===========================================================
@@ -577,7 +577,7 @@ $("#subscribeForm2").on('submit', function(e) {
             success: function() {
                 $('.success.sf2').delay(500).fadeIn(1000);
                 $('.failed.sf2').fadeOut(500);
-            }
+            },
         });
     } else {
         $('.failed.sf2').delay(500).fadeIn(1000);
@@ -601,6 +601,101 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
     document.querySelector('head').appendChild(msViewportStyle);
 }
 
+$("#callbackFrom").validate({
+    rules:{
+        phone: {
+            required: true,
+            minlength: 4,
+            maxlength: 16,
+            digits: true
+        },
 
+        name: {
+            required: true,
+            maxlength: 20
+        }
+    },
+
+    messages:{
+        phone: {
+            digits: "В поле телефон могут быть только цифры",
+            required: "Это поле обязательно для заполнения",
+            minlength: "Телефон должен состоять минимум из 4-х цифр",
+            maxlength: "Телефон не может состоять больше чем из 16 цифр"
+        },
+
+        name: {
+            required: "Это поле обязательно для заполнения",
+            maxlength: "Имя не может состоять больше чем из 20 символов"
+        }
+    },
+    submitHandler: function (form){
+        // Обычная отправка формы
+        //form.submit();
+
+        // или отправка через ajax
+        $(form).trigger('submit');
+    },
+
+});
+
+$("#callbackFromIndex").validate({
+    rules:{
+        phone: {
+            required: true,
+            minlength: 4,
+            maxlength: 16,
+            digits: true
+        },
+
+        name: {
+            required: true,
+            maxlength: 20
+        }
+    },
+
+    messages:{
+        phone: {
+            digits: "В поле телефон могут быть только цифры",
+            required: "Это поле обязательно для заполнения",
+            minlength: "Телефон должен состоять минимум из 4-х цифр",
+            maxlength: "Телефон не может состоять больше чем из 16 цифр"
+        },
+
+        name: {
+            required: "Это поле обязательно для заполнения",
+            maxlength: "Имя не может состоять больше чем из 20 символов"
+        }
+    },
+    submitHandler: function (form){
+        // Обычная отправка формы
+        //form.submit();
+
+        // или отправка через ajax
+        $(form).trigger('submit');
+    },
+
+});
+
+$('body').on('submit', '#callbackFrom, callbackFromIndex', function () {
+    $.ajaxSetup({
+        header:$(this).find('input[name="_token"]').val()
+    });
+
+    $.ajax({
+        url: '/addcallback',
+        type:"POST",
+        data: $(this).serialize(),
+        success: function(data){
+
+            console.log(data);
+        },
+        error: function(data){
+            console.log();
+        }
+    });
+    
+    return false;
+});
 
 }); // End $(document).ready Function

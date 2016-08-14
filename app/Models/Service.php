@@ -9,7 +9,7 @@ class Service extends Model
     protected $fillable = ['title', 'describe', 'image', 'sort', 'active', 'price'];
 
     public function getActiveServices(){
-        return $this->published()->orderBy('sort', 'ASC')->get();
+        return $this->published()->orderBy('sort', 'ASC');
     }
     public function getLatestServices($count = 4){
         return $this->published()->orderBy('sort', 'ASC')->take($count)->get();

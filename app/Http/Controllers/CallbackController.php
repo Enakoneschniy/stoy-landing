@@ -17,6 +17,8 @@ class CallbackController extends Controller
         {
             $callback->name = $request->name;
             $callback->phone = $request->phone;
+            if($request->ticket)
+                $callback->comment = "Услуга " . $request->ticket;
             $callback->active = 1;
             $callback->status = 'Активный';
             $callback->save();

@@ -4640,3 +4640,36 @@ form .error {
 form .btn-shadow.btn-green {
     width: 100%;
 }
+.footer .schedule span,
+.footer .contact-info .email,
+.footer .contact-info .phone{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.footer .schedule i,
+.footer .contact-info i{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 5px;
+    vertical-align: text-bottom;
+}
+
+.footer .contact-info {
+    float: right;
+    color: white;
+
+}
+
+.footer .contact-info .email,
+.footer .contact-info .phone {
+    float: left;
+}
+
+.footer .contact-info .email a{
+    color: white;
+}
+
+.footer .contact-info .phone span{
+    display: none;
+}

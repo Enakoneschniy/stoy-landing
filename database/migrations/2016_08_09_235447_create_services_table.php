@@ -19,7 +19,7 @@ class CreateServicesTable extends Migration
             $table->string('image');
             $table->boolean('active');
             $table->integer('sort');
-            $table->decimal('price');
+            $table->integer('price');
             $table->timestamps();
         });
     }

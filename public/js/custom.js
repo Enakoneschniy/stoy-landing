@@ -423,14 +423,14 @@ $ticketSelected.on('click', function(event) {
     $ticketSelected.removeClass('active');
     $(this).addClass('active');
 
-    $('#ticketForm input[name="ticket"]').val($(this).find('h4').text() + ' Ticket - Cost: ' + $(this).find('.amount').text());
+    $('#ticketForm input[name="ticket"]').val($(this).find('h4').text() + ' Стоимость услуги: ' + $(this).find('.amount').text());
 });
 
 
 /* ==========================================
    TICKET FORM
 ============================================= */
-$("#ticketForm").on('submit', function(e) {
+/*$("#ticketForm").on('submit', function(e) {
     e.preventDefault();
     var data = {
         name: $("#tfName").val(),
@@ -455,7 +455,7 @@ $("#ticketForm").on('submit', function(e) {
     }
 
     return false;
-});
+});*/
 
 
 /* ==========================================
@@ -677,10 +677,57 @@ $("#callbackFromIndex").validate({
 
 });
 
+$("#ticketForm").validate({
+    rules:{
+        phone: {
+            required: true,
+            minlength: 4,
+            maxlength: 18
+            //digits: true
+        },
+
+        name: {
+            required: true,
+            maxlength: 20
+        },
+
+        ticket: {
+            required: true
+        }
+    },
+
+    messages:{
+        phone: {
+            //digits: "В поле телефон могут быть только цифры",
+            required: "Это поле обязательно для заполнения",
+            minlength: "Телефон должен состоять минимум из 4-х цифр",
+            maxlength: "Телефон не может состоять больше чем из 18 цифр"
+        },
+
+        name: {
+            required: "Это поле обязательно для заполнения",
+            maxlength: "Имя не может состоять больше чем из 20 символов"
+        },
+
+        ticket: {
+            required: "Для отправки заявки выберите вид роботы"
+        }
+    },
+    submitHandler: function (form){
+        // Обычная отправка формы
+        //form.submit();
+
+        // или отправка через ajax
+        $(form).trigger('submit');
+    },
+
+});
+
 $('#m3Phone').mask("+38 (999) 999-9999");
 $('#m3PhoneLayout').mask("+38 (999) 999-9999");
+$('#tfPhone').mask("+38 (999) 999-9999");
 
-$('body').on('submit', '#callbackFrom, #callbackFromIndex', function () {
+$('body').on('submit', '#callbackFrom, #callbackFromIndex, #ticketForm', function () {
     $.ajaxSetup({
         header:$(this).find('input[name="_token"]').val()
     });

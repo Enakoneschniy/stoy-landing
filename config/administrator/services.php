@@ -22,7 +22,7 @@ return [
             'title' => 'Описание'
         ],
         'price' => [
-            'type' => 'text',
+            'type' => 'number',
             'output' => '(:value)грн.'
         ],
         'sort' => [
@@ -56,8 +56,8 @@ return [
         ],
         'price' => [
             'type' => 'number',
-            'title' => 'Цена',
-            'output' => '(:value)грн.'
+            'title' => 'Цена'
+            //'output' => '(:value)грн.'
         ],
         'image' => [
             'title' => 'Картинка',
@@ -88,7 +88,7 @@ return [
         'price' => [
             'type' => 'number',
             'title' => 'Цена',
-            'output' => '(:value)грн.'
+            //'output' => '(:value)грн.'
         ],
     ]
 ];

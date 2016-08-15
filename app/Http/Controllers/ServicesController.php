@@ -10,7 +10,7 @@ class ServicesController extends Controller
 {
     public function getServices(Service $service)
     {
-        $this->data['services'] = $service->getLatestServices();
+        $this->data['services'] = $service->getActiveServices();
         return view('services.services', $this->data);
     }
 }

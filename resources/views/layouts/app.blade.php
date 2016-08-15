@@ -178,30 +178,21 @@
     <footer id="footer1-2" class="p-y-md footer f1 bg-edit bg-dark">
         <div class="container">
 
-            <div class="top-bar bot-bar">
-                <!-- Working Hours -->
-                {{--<div class="schedule text-edit">--}}
-                    {{--<i class="icon-clock2"></i> <span>Schedule:</span> Mon-Sat 8:00-18:00, Sun 8:00-14:00--}}
-                {{--</div>--}}
-                <!-- Contact Info -->
-                <div class="contact-info text-edit">
-                    @if($contact->email)
-                        <div class="email m-r-lg"><i class="icon-envelope"></i><a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></div>
-                    @endif
-                    @if($contact->phone)
-                        <div class="phone"><i class="icon-phone3"></i><span>Call us at:</span>{{ $contact->phone }}</div>
-                    @endif
-                </div>
-            </div>
-
             <div class="row">
                 <!-- Copy -->
-                <div class="col-sm-8 text-white">
-                    <p>Copyright © 2016 powered by <a href="https://vk.com/e.nakoneschniy" class="f-w-900 inverse">Evgeniy Nakoneschniy</a></p>
+                <div class="col-sm-6 text-white">
+                    <p>Copyright © 2016 powered by <a href="https://www.linkedin.com/in/evgeniy-nakoneschniy-841720bb" class="f-w-900 inverse">Evgeniy Nakoneschniy</a> & <a href="https://www.linkedin.com/in/%D1%80%D0%BE%D0%BC%D0%B0%D0%BD-%D0%BA%D0%BE%D0%B2%D0%B0%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE-673a11a3" class="f-w-900 inverse">Roman Kovalenko</a></p>
                 </div>
                 <!-- Social Links -->
-                <div class="col-sm-4">
-
+                <div class="col-sm-6">
+                    <div class="contact-info text-edit">
+                        @if($contact->email)
+                            <div class="email m-r-lg"><i class="icon-envelope"></i><a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></div>
+                        @endif
+                        @if($contact->phone)
+                            <div class="phone"><i class="icon-phone3"></i><span>Call us at:</span>{{ $contact->phone }}</div>
+                        @endif
+                    </div>
                 </div>
             </div><!-- /End Row -->
         </div><!-- /End Container -->

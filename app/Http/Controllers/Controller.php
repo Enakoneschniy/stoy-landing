@@ -18,7 +18,9 @@ class Controller extends BaseController
     public function __construct(Menu $menu){
         $contact = file_get_contents(storage_path() . '/administrator_settings/contact.json');
         $data = file_get_contents(storage_path() . '/administrator_settings/images.json');
+        $site = json_decode(file_get_contents(storage_path() . '/administrator_settings/site.json'));
         $resContact = json_decode($contact);
+        $this->data['settings'] = $site;
         $this->data['contact'] = $resContact;
         $this->data['data'] = json_decode($data);
         $this->data['menu'] = $menu->getMenu();

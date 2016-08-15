@@ -3,16 +3,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- TITLE OF SITE -->
-    <title>Your Page Title Goes here..</title>
+    <title>{{$settings->title}}</title>
 
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="{{$settings->description}}">
+    <meta name="keywords" content="{{$settings->keywords}}">
     <meta name="author" content="">
 
     <!-- FAVICON  -->
     <!-- Place your favicon.ico in the images directory -->
-    <link rel="shortcut icon" href="{{ URL::asset('images/favicon.ico') }}" type="image/x-icon">
-    <link rel="icon" href="{{ URL::asset('images/favicon.ico') }}" type="image/x-icon">
+    @if($settings->favicon)
+        <link rel="shortcut icon" href="/uploads/images/favicon/{{$settings->favicon}}" type="image/x-icon">
+        <link rel="icon" href="/uploads/images/favicon/{{$settings->favicon}}" type="image/x-icon">
+    @else
+        <link rel="shortcut icon" href="{{ URL::asset('images/favicon.ico') }}" type="image/x-icon">
+        <link rel="icon" href="{{ URL::asset('images/favicon.ico') }}" type="image/x-icon">
+    @endif
 
     <!-- =========================
        STYLESHEETS
@@ -103,7 +108,13 @@
                         width: 150px;
                         height: 35px;
                     -->
-                    <a href="/" class="navbar-brand smooth-scroll"><img src="{{ URL::asset('images/homelogo.png') }}" alt="logo"><h3 style="float: left;">Профтеплострой</h3></a>
+                    <a href="/" class="navbar-brand smooth-scroll">
+                        @if($settings->logo_image)
+                            <img src="/uploads/images/logo/{{$settings->logo_image}}" alt="{{$settings->logo_text}}">
+                        @endif
+                        @if($settings->logo_text)
+                            <h3 style="float: left;">{{$settings->logo_text}}</h3></a>
+                        @endif
                     <!-- Image Logo For Background Transparent -->
                     <!--
                         <a href="#" class="navbar-brand logo-black smooth-scroll"><img src="images/logo-black.png" alt="logo" /></a>

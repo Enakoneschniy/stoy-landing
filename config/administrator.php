@@ -74,7 +74,8 @@ return array(
         'portfolio',
         'Settings' => [
             'settings.contact',
-            'settings.images'
+            'settings.images',
+            'settings.site'
         ]
     ),
 

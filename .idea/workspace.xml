@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="924e38d5-c485-4cab-8e37-c20f10a17edc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
@@ -11,6 +12,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/custom.js" afterPath="$PROJECT_DIR$/public/js/custom.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/index/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/index/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/news/detail.blade.php" afterPath="$PROJECT_DIR$/resources/views/news/detail.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/news/list.blade.php" afterPath="$PROJECT_DIR$/resources/views/news/list.blade.php" />
+>>>>>>> origin/master
     </list>
     <ignored path="stroy.local.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,21 +53,37 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="custom.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/custom.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="27">
               <caret line="603" column="16" selection-start-line="603" selection-start-column="16" selection-end-line="603" selection-end-column="16" />
+=======
+      <file leaf-file-name="list.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/news/list.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+>>>>>>> origin/master
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/index/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="15" column="115" selection-start-line="15" selection-start-column="115" selection-end-line="15" selection-end-column="115" />
+=======
+      <file leaf-file-name="detail.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/news/detail.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="9" column="54" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="54" />
+>>>>>>> origin/master
               <folding />
             </state>
           </provider>
@@ -127,6 +148,17 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/CallbackController.php" />
         <option value="$PROJECT_DIR$/resources/views/index/index.blade.php" />
         <option value="$PROJECT_DIR$/public/js/custom.js" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/config/mail.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/resources/views/emails/callback.php" />
+        <option value="$PROJECT_DIR$/resources/views/emails/callback.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CallbackController.php" />
+        <option value="$PROJECT_DIR$/resources/views/news/detail.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/news/list.blade.php" />
+>>>>>>> origin/master
       </list>
     </option>
   </component>
@@ -502,12 +534,24 @@
       <workItem from="1470919723292" duration="5404000" />
       <workItem from="1470950017173" duration="12112000" />
       <workItem from="1471104744335" duration="11576000" />
+<<<<<<< HEAD
       <workItem from="1471160689721" duration="3040000" />
+=======
+      <workItem from="1471160689721" duration="3583000" />
+      <workItem from="1471167091208" duration="599000" />
+      <workItem from="1471169775099" duration="570000" />
+      <workItem from="1471172618848" duration="601000" />
+      <workItem from="1471196577952" duration="10633000" />
+>>>>>>> origin/master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="89631000" />
+=======
+    <option name="totallyTimeSpent" value="102577000" />
+>>>>>>> origin/master
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -880,18 +924,32 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/views/index/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="115" selection-start-line="15" selection-start-column="115" selection-end-line="15" selection-end-column="115" />
+=======
+    <entry file="file://$PROJECT_DIR$/resources/views/news/detail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="54" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="148" column="121" selection-start-line="148" selection-start-column="109" selection-end-line="148" selection-end-column="121" />
+=======
+    <entry file="file://$PROJECT_DIR$/resources/views/news/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+>>>>>>> origin/master
           <folding />
         </state>
       </provider>
